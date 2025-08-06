@@ -1,4 +1,14 @@
-<div class="row">
+
+@if (showSpinner) {
+ <div class="text-center pt-5">
+  <button class="btn btn-primary">
+    <span class="spinner-border spinner-border-sm"></span>
+    Loading..
+  </button>
+</div>
+}
+@else {
+  <div class="row">
     @for (item of designationList; track $index) {
         <div class="col-3">
             <div class="card">
@@ -11,5 +21,7 @@
               </div>          
         </div>    
     }
-
 </div>
+}
+
+

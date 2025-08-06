@@ -11,6 +11,6 @@ export class MasterService {
   constructor(private http:HttpClient) { }
 
   getDesignation():Observable<APIResponse>{
-   return this.http.get<APIResponse>('https://freeapi.miniprojectideas.com/api/EmployeeApp/GetAllDesignation')
+   return this.http.get<APIResponse>('https://fakerestapi.azurewebsites.net/api/v1/Users')
   }
 }
