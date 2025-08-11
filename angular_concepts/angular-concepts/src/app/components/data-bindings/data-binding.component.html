@@ -1,0 +1,89 @@
+<p>data-binding works!</p>
+
+<div class="row" class="bg-success">
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4">
+                {{courseName}}
+            </div>
+        </div>
+
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4">
+                {{firstName}}
+            </div>
+        </div>
+
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4">
+                {{rollNumber}}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-4">
+        <div class="row">
+            <input type="text" value={{courseName}}>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4">
+                <input type="{{intputType}}">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <input type="text" [(ngModel)]="courseName" />
+        </div>
+
+        <div class="col-4">
+            <button (click)="onClick()">Click me</button>
+        </div>
+
+        <div class="col-4">
+            Property Binding
+            <div class="{{myClassName}}">Danger</div>
+            <input type="text" [value]="courseName">
+        </div>
+
+        <div class="col-4">
+            Property Binding
+            <div [class]="myClassName">Danger</div>
+            <input [type]="inputType">
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <button (click)="onClickBy('hello angular 18')">Click me</button>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-">
+                <select [(ngModel)]="selectState">
+                    <option value="MA">MA</option>
+                    <option value="BR">BR</option>
+                    <option value="GOA">GOA</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <h2>{{signalName()}}</h2>
+        </div>
+
+
+    </div>
+</div>

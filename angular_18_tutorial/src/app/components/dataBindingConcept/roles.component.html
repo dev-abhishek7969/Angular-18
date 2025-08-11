@@ -1,7 +1,7 @@
 <p>roles works!</p>
 
 <div class="row">
-    <div class="col-3"><p>{{firstname}}</p>
+    <div class="col-3"><p>--{{tempc}}</p>
     </div>
     <div class="col-3"><p>{{version}}</p>
     </div>
@@ -11,7 +11,7 @@
 
 <div class="row">
     <div class="col-3">
-        <input type="text" [value]="firstname" class="form-control"/>
+        <input type="text" [value]="temzpf" class="form-control"/>
     </div>
 
     <div class="col-3">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="col-3">
-        <input type="text" placeholder="2 way binding" [(ngModel)] = "firstname"/>
+        <input #c type="number" placeholder="2 way binding" [(ngModel)] = "tempc" (ngModelChange)="updateValue(c.value)"/>
     </div>
 
     <div class="col-3">
