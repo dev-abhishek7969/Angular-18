@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-structural-dir',
@@ -15,6 +16,8 @@ export class StructuralDirComponent {
   num1: string = '';
   num2 : string = '';
   selectedState: string = 'USA';
+
+  constructor(private router:Router){}
 
   showDiv1(){
     this.div1Visible = true;
@@ -40,4 +43,8 @@ export class StructuralDirComponent {
     {studId:76, name:'FFF', city: 'Thane', isActive:  true}
   ]
 
+
+  gotoAttributeDir(){
+    this.router.navigateByUrl("attribute-dir");
+  }
 }
