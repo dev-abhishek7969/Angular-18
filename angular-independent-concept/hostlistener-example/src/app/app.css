@@ -1,0 +1,11 @@
+.hover-box {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: lightblue;
+  transition: background 0.3s, transform 0.3s, border 0.3s;
+  cursor: pointer;
+}
